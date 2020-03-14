@@ -19,5 +19,5 @@ def multiply_in_add(a, b):
     return c
 
 
-print(multiply(29494, 111111488))
-print(multiply_in_add(29394858, 193274838))
+print(multiply(29494, 11111148800000000000000000000))
+print(multiply_in_add(29394858, 193270000000000000000000))
