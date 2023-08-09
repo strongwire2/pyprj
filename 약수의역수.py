@@ -53,6 +53,6 @@ if __name__ == '__main__':
 
     # count(100000)
 
-    #
+    # 10만까지 약수의 역수합을 구함
     for i in range(1, 100000+1):
         sum_of_inv(i)
