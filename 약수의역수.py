@@ -38,7 +38,7 @@ def count(max):
             abundant += 1
         print(f"전체={i}, 완전수={perfect}({perfect*100/i}%), 부족수={deficient}({deficient*100/i}%), 과잉수={abundant}({abundant*100/i}%)")
 
-
+# 주어진 수 n의 약수의 역수의 합을 구한다. CSV 형식으로 출력
 def sum_of_inv(n):
     d = get_divisor(n)
     det = determine(d)
@@ -53,5 +53,6 @@ if __name__ == '__main__':
 
     # count(100000)
 
+    #
     for i in range(1, 100000+1):
         sum_of_inv(i)
