@@ -8,8 +8,8 @@ def get_divisor(n):
 
 
 # 완전수, 부족수, 과잉수를 판단함.
-def determine(n):
-    d = get_divisor(n)
+def determine(d):
+    # d = get_divisor(n)
     # 완전수 = 모든 약수를 더했을 때, 그 수의 2배가 되는 경우 = 모든 진약수를 더했을 때, 그 수가 되는 경우
     sum = 0
     for i in d:
@@ -39,19 +39,19 @@ def count(max):
         print(f"전체={i}, 완전수={perfect}({perfect*100/i}%), 부족수={deficient}({deficient*100/i}%), 과잉수={abundant}({abundant*100/i}%)")
 
 
+def sum_of_inv(n):
+    d = get_divisor(n)
+    det = determine(d)
+    sum = 0
+    for i in d:
+        sum += 1.0/float(i)
+    print(f"{n}, {det}, {sum}")
 
 if __name__ == '__main__':
-    print(get_divisor(16))
-    print(determine(6))
-    print(determine(28))
-    print(determine(496))
+    # print(get_divisor(16))
+    # print(determine(get_divisor(6)))
 
-    print(determine(9))
-    print(determine(13))
-    print(determine(29))
+    # count(100000)
 
-    print(determine(12))
-    print(determine(18))
-    print(determine(20))
-
-    count(100000)
+    for i in range(1, 100000+1):
+        sum_of_inv(i)
